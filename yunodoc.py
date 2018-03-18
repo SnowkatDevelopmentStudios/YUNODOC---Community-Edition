@@ -20,14 +20,14 @@ import re
 
 
 def main():
-    print("yunodoc  Copyright (C) 2017  Ian Cronkright")
+    print("yunodoc  Copyright (C) 2017 Snowkat Development Studios - Developed by: Ian Cronkright")
     print("This program comes with ABSOLUTELY NO WARRANTY.  This is free")
     print("software, and you are welcome to redistribute it under certain")
-    print("conditions.")
+    print("conditions contained in the license.")
     print("")
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "isf:", ["ian", "steven", "file="])
+        opts, args = getopt.getopt(sys.argv[1:], "isf:", ["ian", "r3s", "file="])
     except getopt.GetoptError:
         sys.exit(2)
 
