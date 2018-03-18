@@ -1,10 +1,10 @@
 # Creates a documentation table based off the DOC comment style
-# Copyright (C) 2017  Ian Cronkright
+# Copyright (C) 2017  Snowkat Development Studios
+# Developed by: Ian Cronkright 2017
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
-# the Free Software Foundation, either version 3 of the License, or
-# (at your option) any later version.
+# the Free Software Foundation, either version 3 of the License,
 #
 # This program is distributed in the hope that it will be useful,
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
