@@ -1,6 +1,6 @@
 # Creates a documentation table based off the DOC comment style
 # Copyright (C) 2017  Snowkat Development Studios
-# Developed by: Ian Cronkright 2017
+# Developed by: Ian Cronkright(Txuritan) 2017
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -20,32 +20,32 @@ import re
 
 
 def main():
-    print("yunodoc  Copyright (C) 2017 Snowkat Development Studios - Developed by: Ian Cronkright")
+    print("yunodoc  Copyright (C) 2017 Snowkat Development Studios - Developed by: Ian Cronkright(Txuritan)")
     print("This program comes with ABSOLUTELY NO WARRANTY.  This is free")
     print("software, and you are welcome to redistribute it under certain")
     print("conditions contained in the license.")
     print("")
 
     try:
-        opts, args = getopt.getopt(sys.argv[1:], "isf:", ["ian", "r3s", "file="])
+        opts, args = getopt.getopt(sys.argv[1:], "isf:", ["txur", "r3s", "file="])
     except getopt.GetoptError:
         sys.exit(2)
 
-    flag_ian = False
-    flag_steven = False
+    flag_txur = False
+    flag_r3s = False
     flag_file = ""
 
     for opt, arg in opts:
-        if opt in ('-s', '--steven'):
-            flag_ian = False
-            flag_steven = True
+        if opt in ('-r', '--r3s'):
+            flag_txur = False
+            flag_r3s = True
         elif opt in ('-i', '--ian'):
-            flag_ian = True
-            flag_steven = False
+            flag_txur = True
+            flag_r3s = False
         elif opt in ('-f', '--file'):
             flag_file = arg
         else:
-            print("-i, --ian    -s, --steven    -f, --file <input>")
+            print("-t, --txur    -r, --r3s    -f, --file <input>")
             sys.exit(2)
 
     m_doc_line_object = re.compile(r"(#|\/\/ DOC .*)", re.IGNORECASE)
@@ -76,7 +76,7 @@ def main():
                         doc_pur_list.append(str(doc_pur.group()))
     else:
         print("You must provide an input")
-        print("-i, --ian    -s, --steven    -f, --file <input>")
+        print("-t, --txur    -r, --r3s    -f, --file <input>")
         sys.exit(2)
 
     if not len(doc_var_list) == 0 or not len(doc_typ_list) == 0 or not len(doc_pur_list) == 0:
@@ -161,7 +161,7 @@ def main():
 
         else:
             print("You must provide a style flag")
-            print("-i, --ian    -s, --steven")
+            print("-t, --txur    -r, --r3s")
             sys.exit(2)
 
         print(output_table)
